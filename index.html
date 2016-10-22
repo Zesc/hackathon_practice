@@ -3,8 +3,49 @@
   <head>
     <meta charset="utf-8">
     <title>Practice Hackathon - Fullscreen Form</title>
+    <link rel="stylesheet" href="css/normalize.css" media="screen" title="no title">
+    <link rel="stylesheet" href="css/index.css" media="screen" title="no title">
+    <script type="text/javascript" src="js/script.js">
+
+    </script>
   </head>
   <body>
     <h1>Practice Hackathon - Fullscreen Form</h1>
+
+    <form id="proj_form" name="proj_form" method="post">
+
+        <div class="">
+          <label for="name">What's your name?</label>
+          <input type="text" id="name" placeholder="Rick Sanchez" autofocus required>
+        </div>
+
+        <div class="">
+          <label for="email">What's your email address?</label>
+          <input type="email" id="email" placeholder="c137@galaxymail.com" required>
+        </div>
+
+
+        <div class="">
+          <label for="website">What's your priority for your new website?</label>
+          <input type="radio" id="sell" name="website" value="sell" required>
+          <label for="sell" id="sell-icon" class="radio-icons"></label>
+          <input type="radio" id="fame" name="website" value="fame">
+          <label for="fame" id="fame-icon" class="radio-icons"></label>
+          <input type="radio" id="mobile" name="website" value="mobile">
+          <label for="mobile" id="mobile-icon" class="radio-icons"></label>
+        </div>
+
+        <div class="color-container">
+          <!-- <label for="color-picker">Choose a color for your website.</label>
+          <input type="color" id="color-picker"> -->
+          <div class="preview-color">
+
+          </div>
+        </div>
+
+
+        <button type="submit" name="button">Submit</button>
+    </form>
+
   </body>
 </html>

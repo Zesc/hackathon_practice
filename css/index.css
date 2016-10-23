@@ -185,6 +185,7 @@ div.color-palette #color-options li {
   visibility: hidden;
   opacity: 0;
   transform: scaleY(.5);
+    -webkit-transform: scaleY(.5);
 }
 
 div.show-palette #color-options li.first-row {
@@ -195,6 +196,7 @@ div.show-palette #color-options li.first-row {
   visibility: visible;
   opacity: 1;
   transform: scaleY(1);
+  -webkit-transform: scaleY(1);
 }
 
 div.show-palette #color-options li.second-row {
@@ -205,6 +207,7 @@ div.show-palette #color-options li.second-row {
   visibility: visible;
   opacity: 1;
   transform: scaleY(1);
+  -webkit-transform: scaleY(1);
 }
 
 div.show-palette #color-options li.third-row {
@@ -215,6 +218,7 @@ div.show-palette #color-options li.third-row {
   visibility: visible;
   opacity: 1;
   transform: scaleY(1);
+  -webkit-transform: scaleY(1);
 }
 
 div.show-palette #color-options li.last-row {
@@ -225,6 +229,7 @@ div.show-palette #color-options li.last-row {
   visibility: visible;
   opacity: 1;
   transform: scaleY(1);
+  -webkit-transform: scaleY(1);
 }
 
 

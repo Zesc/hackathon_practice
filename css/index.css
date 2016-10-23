@@ -341,7 +341,7 @@ we need the display none, and the opacity at 0 first. Because we want to be able
   color: #252525;
 }
 
-.current-num, .total-num{
+#current-num, #total-num{
   font-weight: 600;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #191919;

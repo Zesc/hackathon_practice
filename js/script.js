@@ -88,11 +88,14 @@ window.onload = function () {
         }
       },
       test: function () {
+        var numb = document.getElementById("current-num");
         if (event.key === "Enter") {
           if (this.id == document.getElementsByClassName(this.id)[0].classList[0]) {
             document.querySelector("." + this.id + "").value = this.value;
           }
           this.parentNode.classList.toggle("form-effect");
+          var update = document.createTextNode(Number(numb.innerText) + 1);
+          numb.innerText =  update.textContent;
         }
       }
     };

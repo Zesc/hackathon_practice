@@ -42,6 +42,11 @@ window.onload = function () {
         colorPicker.selector.style.background = pickedColor;
         palettePopUp.palette.classList.toggle("show-palette");
         palettePopUp.form.classList.toggle("hide-form");
+        window.location.hash = "";
+        colorPicker.returnToHash();
+      },
+      returnToHash: function () {
+        window.location.hash = "#palette-div";
       }
     };
 
@@ -60,6 +65,7 @@ window.onload = function () {
       },
       showFinalForm: function () {
         if (event.key === "Enter") {
+          window.location.hash = "";
           palettePopUp.form.classList.toggle("hide-form");
           keyEnterLast.header.classList.toggle("hide-form");
           palettePopUp.finalForm.classList.toggle("hide-form");
@@ -73,7 +79,7 @@ window.onload = function () {
         this.bindEvents();
       },
       cacheDOM: function () {
-        this.divs = document.getElementsByClassName("field-div");
+        // this.divs = document.getElementsByClassName("field-div");
         this.fields = document.getElementsByClassName("first-form-fill");
       },
       bindEvents: function () {
@@ -83,12 +89,14 @@ window.onload = function () {
       },
       test: function () {
         if (event.key === "Enter") {
-          var test = "#" + this.parentNode.nextElementSibling.id;
-          window.location.hash = test;
+          this.parentNode.classList.toggle("form-effect");
+          // window.location.hash = "";
+          // var nextField = "#" + this.parentNode.nextElementSibling.id;
+          // window.location.hash = nextField;
         }
       }
     };
-    
+
     palettePopUp.init();
     keyEnterLast.init();
     formFill.init();

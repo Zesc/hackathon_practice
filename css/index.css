@@ -109,9 +109,17 @@ textarea:-moz-placeholder, input:-moz-placeholder { /* Firefox 18- */
 }
 
 .field-div {
+  /*background-color: blue;
+  border: 1px solid red;*/
   height: 50rem;
-  margin: 0 auto;
+  margin: 8rem auto 0 auto;
   width: 80%;
+  transition: all 1s;
+}
+
+.form-effect {
+  margin-top: -50rem;
+  opacity: 0;
 }
 
 .preview-container {

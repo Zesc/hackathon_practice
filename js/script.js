@@ -108,6 +108,11 @@ window.onload = function () {
       }
     };
 
+    var b_continue = document.getElementById("continue");
+    b_continue.addEventListener("click", function () {
+      alert("It worked!");
+    });
+
     palettePopUp.init();
     keyEnterLast.init();
     formProgress.init();

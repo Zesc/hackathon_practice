@@ -1,4 +1,27 @@
+* {
+  box-sizing: border-box;
+}
 
+html, body, .color-palette {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  /*margin: 0;
+  padding: 0;*/
+}
+
+form {
+  font-size: 4rem;
+}
+
+button {
+  font-size: 1.6rem;
+}
 /*Radio label and icon styling*/
 #sell-icon {
   background: url("../images/conversion.svg") no-repeat center center;
@@ -12,45 +35,183 @@
   background: url("../images/mobile.svg") no-repeat center center;
 }
 
-label[for="sell"]::before {
-  content: "Sell things";
+label::before {
   color: black;
   display: inline-block;
-  margin-top: 180px;
+  margin-top: 18rem;
+}
+
+label[for="sell"]::before {
+  content: "Sell things";
 }
 label[for="fame"]::before {
   content: "Become famous";
-  color: black;
-  display: inline-block;
-  margin-top: 180px;
 }
 label[for="mobile"]::before {
   content: "Mobile market";
-  color: black;
-  display: inline-block;
-  margin-top: 180px;
 }
 
 .radio-icons {
-  height: 180px;
-  width: 150px;
+  height: 18rem;
+  width: 15rem;
   background-size:contain;
   display:inline-block;
 }
 
 /*input styling*/
 input[type="radio"] {
-  left: -999px;
+  left: -99.9rem;
   position: absolute;
 }
 
 input[type"color"] {
-  width: 500px;
+  width: 50rem;
+}
+
+#color-container {
+  height: 14rem;
+}
+
+.preview-container {
+  background-color: #292c30;
+  border-radius: .5rem;
+  height: 14rem;
+  padding: .3rem;
+  position: relative;
+  width: 15rem;
+}
+
+.preview-container span {
+  color: #fff;
+  font-size: 1.3rem;
+  left: 1rem;
+  position: absolute;
+  bottom: 1.1rem;
+}
+
+.preview-container span::after {
+  content: '\25BE';
+  margin-left: 4rem;
 }
 
 .preview-color {
-  background-color: blue;
-  height: 100px;
-  width: 100px;
+  background-color: #555b64;
+  border-top-left-radius: .3rem;
+  border-top-right-radius: .3rem;
+  height: 10rem;
+  width: 14.4rem;
+}
 
+/*Color palette*/
+
+.color-palette {
+  background-color: #3b3f45;
+  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transition: all 1s;
+}
+
+.show-palette {
+  display: block;
+  opacity: 1;
+}
+
+
+
+/*let's start with the color palette in absolute positioning, then use a combination of css transition
+we need the display none, and the opacity at 0 first. Because we want to be able to click on the selector. If it's not display none, then the invisible element is in the way. Then the js will toggle the class which will display and have opacity back to 1.
+*/
+
+#color-options {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+#color-options li {
+  border-radius: .5rem;
+  display: inline-block;
+  height: 21%;
+  margin: 1rem 0 0 .5rem;
+  width: 18.5%;
+}
+
+#color-options .first-in-row {
+  margin: 2rem 0 0 2rem;
+}
+
+#color-options .palette-desc {
+  background-color: #282b30;
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  letter-spacing: .1rem;
+  padding-left: 1rem;
+  text-transform: uppercase;
+}
+
+#hue-588c75 {
+  background-color: #588c75;
+}
+
+#hue-b0c47f {
+  background-color: #b0c47f;
+}
+#hue-f3e395 {
+  background-color: #f3e395;
+}
+#hue-f3ae73 {
+  background-color: #f3ae73;
+}
+#hue-da645a {
+  background-color: #da645a;
+}
+#hue-79a38f {
+  background-color: #79a38f;
+}
+#hue-c1d099 {
+  background-color: #c1d099;
+}
+#hue-f5eaaa {
+  background-color: #f5eaaa;
+}
+#hue-f5be8f {
+  background-color: #f5be8f;
+}
+#hue-e1837b {
+  background-color: #e1837b;
+}
+#hue-9bbaab {
+  background-color: #9bbaab;
+}
+#hue-d1dcb2 {
+  background-color: #d1dcb2;
+}
+#hue-f9eec0 {
+  background-color: #f9eec0;
+}
+#hue-f7cda9 {
+  background-color: #f7cda9;
+}
+#hue-e8a19b {
+  background-color: #e8a19b;
+}
+#hue-bdd1c8 {
+  background-color: #bdd1c8;
+}
+#hue-e1e7cd {
+  background-color: #e1e7cd;
+}
+#hue-faf4d4 {
+  background-color: #faf4d4;
+}
+#hue-fbdfc9 {
+  background-color: #fbdfc9;
+}
+#hue-f1c1bd {
+  background-color: #f1c1bd;
 }

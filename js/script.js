@@ -43,6 +43,10 @@ window.onload = function () {
       }
     };
 
+    var b_continue = document.getElementById("continue");
+    b_continue.addEventListener("click", function () {
+      alert("It worked!");
+    })
     // var keyEvent = {
     //   init: function () {
     //     this.cacheDOM();

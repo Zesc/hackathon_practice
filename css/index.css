@@ -287,3 +287,27 @@ we need the display none, and the opacity at 0 first. Because we want to be able
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #191919;
 }
+
+#continue{
+  font-size: 2rem;
+  font-weight: bolder;
+  border: .3rem solid #232529;
+  background-color: #3b3f45;
+  color: #232529;
+  border-radius: 5rem;
+  padding: .8rem 1.8rem;
+}
+
+#continue:hover{
+  color: #fff;
+  background-color: #232529;
+}
+
+#dollar-sign {
+  background: url("../images/dollar.svg");
+  background-size: auto 75%;
+  background-position: left;
+  background-repeat: no-repeat;
+  display: block;
+  text-overflow: ellipsis;
+}

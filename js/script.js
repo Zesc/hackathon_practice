@@ -1,6 +1,7 @@
 window.onload = function () {
   (function () {
 
+    // palettePopUp controls the display of the color palette while hiding the other elements. It uses the toggle method to achieve this.
     var palettePopUp = {
       init: function () {
         this.cacheDOM();
@@ -73,7 +74,7 @@ window.onload = function () {
       }
     };
 
-    var formFill = {
+    var formProgress = {
       init: function () {
         this.cacheDOM();
         this.bindEvents();
@@ -81,6 +82,7 @@ window.onload = function () {
       cacheDOM: function () {
         // this.divs = document.getElementsByClassName("field-div");
         this.fields = document.getElementsByClassName("first-form-fill");
+        this.finalName = document.getElementById("form-final-name");
       },
       bindEvents: function () {
         for (var i = 0; i <   this.fields.length; i++) {
@@ -89,6 +91,15 @@ window.onload = function () {
       },
       test: function () {
         if (event.key === "Enter") {
+          console.log(this);
+          console.log(this.id);
+          console.log(this.value);
+          console.log(palettePopUp.finalForm);
+
+          if (this.id == document.getElementsByClassName(this.id)[0].classList[0]) {
+            document.querySelector("." + this.id + "").value = this.value;
+          }
+
           this.parentNode.classList.toggle("form-effect");
           // window.location.hash = "";
           // var nextField = "#" + this.parentNode.nextElementSibling.id;
@@ -99,7 +110,7 @@ window.onload = function () {
 
     palettePopUp.init();
     keyEnterLast.init();
-    formFill.init();
+    formProgress.init();
   }());
 
 };

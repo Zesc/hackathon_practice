@@ -63,12 +63,12 @@
 
 				<div id="desc-div" class="field-div">
 						<label for="description">Describe how you imagine your website</label><br>
-						<textarea class="first-form-fill" name="description" placeholder="Describe here"></textarea>
+						<textarea class="first-form-fill" id="desc" name="description" placeholder="Describe here"></textarea>
 				</div>
 
 				<div id="budget-div" class="field-div">
 						<label for="budget">What's your budget?</label><br>
-						<input class="first-form-fill" name="budget" type="number" placeholder="1000" step="100" min="100" autocomplete="off">
+						<input class="first-form-fill" name="budget" id="budget" type="number" placeholder="1000" step="100" min="100" autocomplete="off">
 				</div>
 
 				<!-- <button type="submit" name="button">Submit</button> -->
@@ -104,26 +104,26 @@
 				<h2>Review and Submit</h2>
 				<div class="form-final-field-div">
 					<label for="form-final-name">What's your name?</label>
-					<input type="text" id="form-final=name" placeholder="Rick Sanchez" autofocus required autocomplete="off">
+					<input type="text" id="form-final-name" class="name" placeholder="Rick Sanchez" autofocus required autocomplete="off">
 				</div>
 
 				<div class="form-final-field-div">
 					<label for="form-final-email">What's your email address?</label>
-					<input type="email" id="form-final-email" placeholder="c137@galaxymail.com" required autocomplete="off">
+					<input type="email" id="form-final-email" class="email" placeholder="c137@galaxymail.com" required autocomplete="off">
 				</div>
 
 				<div class="form-final-field-div height-adj">
 					<label for="form-final-website">What's your priority for your new website?</label>
-					<input type="radio" id="form-final-sell" name="website" value="sell" required autocomplete="off">
+					<input type="radio" id="form-final-sell" name="website" class="sell" value="sell" required autocomplete="off">
 					<label for="form-final-sell" id="sell-icon" class="radio-icons"></label>
-					<input type="radio" id="form-final-fame" name="website" value="fame" autocomplete="off">
+					<input type="radio" id="form-final-fame" name="website" class="fame" value="fame" autocomplete="off">
 					<label for="form-final-fame" id="fame-icon" class="radio-icons"></label>
-					<input type="radio" id="form-final-mobile" name="website" value="mobile" autocomplete="off">
+					<input type="radio" id="form-final-mobile" name="website" class="mobile" value="mobile" autocomplete="off">
 					<label for="form-final-mobile" id="mobile-icon" class="radio-icons"></label>
 				</div>
 
 				<div class="form-final-field-div height-adj">
-					<input type="checkbox" id="form-final-color-check" value="colorCheck" required autocomplete="off">
+					<input type="checkbox" id="form-final-color-check" class="color-check" value="colorCheck" required autocomplete="off">
 					<label for="form-final-color-check" id="color-container">Choose a color for your website.
 						<div class="preview preview-container">
 							<div class="preview preview-color"></div>
@@ -133,12 +133,12 @@
 
 				<div class="form-final-field-div">
 						<label for="form-final-description">Describe how you imagine your website</label><br>
-						<textarea name="description" placeholder="Describe here"></textarea>
+						<textarea name="description" class="desc" placeholder="Describe here"></textarea>
 				</div>
 
 				<div class="form-final-field-div">
 						<label for="form-final-budget">What's your budget?</label><br>
-						<input name="budget" type="number" placeholder="1000" step="100" min="100" autocomplete="off">
+						<input name="budget" type="number" class="budget" placeholder="1000" step="100" min="100" autocomplete="off">
 				</div>
 
 				<button type="submit" name="button">Submit</button>

@@ -3,6 +3,7 @@
 
 * {
   box-sizing: border-box;
+  font-family: 'Raleway', Arial, sans-serif;
 }
 
 html, body, .color-palette {
@@ -15,7 +16,6 @@ html {
 
 body {
   background-color: #3b3f45;
-  font-family: 'Raleway', Arial, sans-serif;
 }
 
 form {
@@ -27,7 +27,6 @@ form {
 .hide-form {
   display: none;
 }
-
 
 button {
   font-size: 1.6rem;
@@ -51,8 +50,9 @@ label {
 }
 
 label::before {
-  color: black;
+  color: #232529;
   display: inline-block;
+  font-size: 2rem;
   margin-top: 18rem;
 }
 
@@ -74,14 +74,44 @@ label[for="mobile"]::before {
 }
 
 /*input styling*/
-input[type="radio"] {
+input[type="radio"], input[type="checkbox"] {
   left: -99.9rem;
   position: absolute;
 }
 
+input, textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: .1rem solid black;
+  color: #fffed8;
+  font-size: 5.6rem;
+  font-weight: 900;
+  outline: none;
+  padding: 1rem;
+  width: 100%;
+}
 
-input[type"color"] {
-  width: 50rem;
+textarea {
+  border: .1rem solid black;
+}
+
+textarea::-webkit-input-placeholder, input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #35383e;
+}
+textarea::-moz-placeholder, input::-moz-placeholder { /* Firefox 19+ */
+  color: #35383e;
+}
+textarea:-ms-input-placeholder, input:-ms-input-placeholder { /* IE 10+ */
+  color: #35383e;
+}
+textarea:-moz-placeholder, input:-moz-placeholder { /* Firefox 18- */
+  color: #35383e;
+}
+
+.field-div {
+  height: 50rem;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .preview-container {
@@ -286,4 +316,41 @@ we need the display none, and the opacity at 0 first. Because we want to be able
   font-weight: 600;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #191919;
+}
+
+/*Final form*/
+
+.form-final {
+  margin: 0 auto;
+  padding-top: 2rem;
+  width: 50%;
+}
+
+.form-final-field-div {
+  height: 10rem;
+  margin: 5rem 0;
+}
+
+.height-adj {
+  height: 15rem;
+}
+
+.form-final h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.form-final label, .form-final input, .form-final textarea {
+  color: #35383e;
+  font-size: 1.6rem;
+}
+
+.form-final input, .form-final textarea {
+  color: #807f6c;
+  width: 100%;
+}
+
+.form-final-container {
+  background-color: #FFFED8;
+
 }

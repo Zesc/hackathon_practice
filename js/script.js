@@ -10,8 +10,10 @@ window.onload = function () {
         this.selector = document.getElementById("color-container");
         this.palette = document.querySelector(".color-palette");
         this.form = document.querySelector("form");
+        this.finalForm = document.querySelector(".form-final-container");
       },
       bindEvents: function () {
+        this.finalForm.classList.toggle("hide-form");
         this.selector.addEventListener("click", this.showPalette);
       },
       showPalette: function () {
@@ -43,43 +45,53 @@ window.onload = function () {
       }
     };
 
-    // var keyEvent = {
-    //   init: function () {
-    //     this.cacheDOM();
-    //     this.bindEvents();
-    //   },
-    //   cacheDOM: function () {
-    //     this.form = document.getElementById("proj_form");
-    //     this.field = document.getElementById("name");
-    //   },
-    //   bindEvents: function () {
-    //     for (var i = 0; i < this.form.children.length; i++) {
-    //       if (this.form.children[i].nodeName === "INPUT") {
-    //         console.log('a');
-    //         this.form.children[i].addEventListener("keyup", this.test(i));
-    //
-    //       }
-    //     }
-    //
-    //       // this.form.addEventListener("keyup",function () {
-    //       //   for (var i = 0; i < keyEvent.form.children.length; i++) {
-    //       //     if (keyEvent.form.children[i].nodeName === "INPUT" && event.key === "Enter") {
-    //       //       this.children[i].setAttribute("autofocus","autofocus");
-    //       //     }
-    //       //   }
-    //       // });
-    //   },
-    //   test: function (i) {
-    //     console.log(event.key);
-    //     if (event.key === "Enter") {
-    //       console.log('h');
-    //         this.form.children[i].setAttribute("autofocus","autofocus");
-    //     }
-    //   }
-    // };
+    var keyEnterLast = {
+      init: function () {
+        this.cacheDOM();
+        this.bindEvents();
+      },
+      cacheDOM: function () {
+        this.field = document.querySelectorAll("input")[6];
+        this.header = document.querySelector(".header");
+      },
+      bindEvents: function () {
+        // this.field.addEventListener("click", this.showFinalForm);
+        this.field.addEventListener("keyup", this.showFinalForm);
+      },
+      showFinalForm: function () {
+        if (event.key === "Enter") {
+          palettePopUp.form.classList.toggle("hide-form");
+          keyEnterLast.header.classList.toggle("hide-form");
+          palettePopUp.finalForm.classList.toggle("hide-form");
+        }
+      }
+    };
 
+    var formFill = {
+      init: function () {
+        this.cacheDOM();
+        this.bindEvents();
+      },
+      cacheDOM: function () {
+        this.divs = document.getElementsByClassName("field-div");
+        this.fields = document.getElementsByClassName("first-form-fill");
+      },
+      bindEvents: function () {
+        for (var i = 0; i <   this.fields.length; i++) {
+          this.fields[i].addEventListener("keyup", this.test);
+        }
+      },
+      test: function () {
+        if (event.key === "Enter") {
+          var test = "#" + this.parentNode.nextElementSibling.id;
+          window.location.hash = test;
+        }
+      }
+    };
+    
     palettePopUp.init();
-
+    keyEnterLast.init();
+    formFill.init();
   }());
 
 };

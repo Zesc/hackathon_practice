@@ -26,7 +26,6 @@ window.onload = function () {
         this.bindEvents();
       },
       cacheDOM: function () {
-        // this.palette = document.querySelector(".color-palette");
         this.colorOptions = document.querySelectorAll("li");
         this.selector = document.querySelector(".preview-color");
       },
@@ -37,7 +36,7 @@ window.onload = function () {
       },
       pickColor: function () {
         pickedColor = this.children[0].innerHTML;
-        console.log(colorPicker.selector.style.background = pickedColor);
+        colorPicker.selector.style.background = pickedColor;
         palettePopUp.palette.classList.toggle("show-palette");
       }
     };

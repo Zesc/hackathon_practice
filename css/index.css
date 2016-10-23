@@ -68,9 +68,9 @@ input[type"color"] {
   width: 50rem;
 }
 
-#color-container {
+/*#color-container {
   height: 14rem;
-}
+}*/
 
 .preview-container {
   background-color: #292c30;
@@ -104,21 +104,66 @@ input[type"color"] {
 
 /*Color palette*/
 
-.color-palette {
+div.color-palette {
   background-color: #3b3f45;
-  display: none;
+  visibility: hidden;
   opacity: 0;
   position: absolute;
   top: 0;
   width: 100%;
-  transition: all 1s;
+  transition: all .3s;
 }
 
-.show-palette {
-  display: block;
+div.show-palette {
+  visibility: visible;
   opacity: 1;
 }
 
+div.color-palette #color-options li {
+  visibility: hidden;
+  opacity: 0;
+  transform: scaleY(.5);
+}
+
+div.show-palette #color-options li.first-row {
+  transition: all .3s;
+}
+
+div.show-palette #color-options li.first-row {
+  visibility: visible;
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+div.show-palette #color-options li.second-row {
+  transition: all .5s;
+}
+
+div.show-palette #color-options li.second-row {
+  visibility: visible;
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+div.show-palette #color-options li.third-row {
+  transition: all .7s;
+}
+
+div.show-palette #color-options li.third-row {
+  visibility: visible;
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+div.show-palette #color-options li.last-row {
+  transition: all .9s;
+}
+
+div.show-palette #color-options li.last-row {
+  visibility: visible;
+  opacity: 1;
+  transform: scaleY(1);
+}
 
 
 /*let's start with the color palette in absolute positioning, then use a combination of css transition
@@ -140,7 +185,7 @@ we need the display none, and the opacity at 0 first. Because we want to be able
 }
 
 #color-options .first-in-row {
-  margin: 2rem 0 0 2rem;
+  margin: 2rem 0 0 2.5rem;
 }
 
 #color-options .palette-desc {
@@ -154,64 +199,23 @@ we need the display none, and the opacity at 0 first. Because we want to be able
   text-transform: uppercase;
 }
 
-#hue-588c75 {
-  background-color: #588c75;
-}
-
-#hue-b0c47f {
-  background-color: #b0c47f;
-}
-#hue-f3e395 {
-  background-color: #f3e395;
-}
-#hue-f3ae73 {
-  background-color: #f3ae73;
-}
-#hue-da645a {
-  background-color: #da645a;
-}
-#hue-79a38f {
-  background-color: #79a38f;
-}
-#hue-c1d099 {
-  background-color: #c1d099;
-}
-#hue-f5eaaa {
-  background-color: #f5eaaa;
-}
-#hue-f5be8f {
-  background-color: #f5be8f;
-}
-#hue-e1837b {
-  background-color: #e1837b;
-}
-#hue-9bbaab {
-  background-color: #9bbaab;
-}
-#hue-d1dcb2 {
-  background-color: #d1dcb2;
-}
-#hue-f9eec0 {
-  background-color: #f9eec0;
-}
-#hue-f7cda9 {
-  background-color: #f7cda9;
-}
-#hue-e8a19b {
-  background-color: #e8a19b;
-}
-#hue-bdd1c8 {
-  background-color: #bdd1c8;
-}
-#hue-e1e7cd {
-  background-color: #e1e7cd;
-}
-#hue-faf4d4 {
-  background-color: #faf4d4;
-}
-#hue-fbdfc9 {
-  background-color: #fbdfc9;
-}
-#hue-f1c1bd {
-  background-color: #f1c1bd;
-}
+#hue-588c75 {background-color: #588c75;}
+#hue-b0c47f {background-color: #b0c47f;}
+#hue-f3e395 {background-color: #f3e395;}
+#hue-f3ae73 {background-color: #f3ae73;}
+#hue-da645a {background-color: #da645a;}
+#hue-79a38f {background-color: #79a38f;}
+#hue-c1d099 {background-color: #c1d099;}
+#hue-f5eaaa {background-color: #f5eaaa;}
+#hue-f5be8f {background-color: #f5be8f;}
+#hue-e1837b {background-color: #e1837b;}
+#hue-9bbaab {background-color: #9bbaab;}
+#hue-d1dcb2 {background-color: #d1dcb2;}
+#hue-f9eec0 {background-color: #f9eec0;}
+#hue-f7cda9 {background-color: #f7cda9;}
+#hue-e8a19b {background-color: #e8a19b;}
+#hue-bdd1c8 {background-color: #bdd1c8;}
+#hue-e1e7cd {background-color: #e1e7cd;}
+#hue-faf4d4 {background-color: #faf4d4;}
+#hue-fbdfc9 {background-color: #fbdfc9;}
+#hue-f1c1bd {background-color: #f1c1bd;}

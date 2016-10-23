@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+html {
+  font-size: 62.5%;
+}
+
+body{
+  font-family: 'Raleway', Arial, sans-serif;
+}
 
 /*Radio label and icon styling*/
 #sell-icon {
@@ -55,3 +64,58 @@ input[type="color"] {
 
 }
 
+.header{
+  width: 100%;
+  background-color: #3b3f45;
+  padding: 3rem;
+  margin-bottom: 1rem;
+}
+
+.header h1{
+  color: #fff;
+  font-weight: 600;
+  font-size: 3.5rem;
+}
+
+.icon{
+  margin-top: 1rem;
+  color: #252525;
+}
+
+.icon:before{
+  margin: 0 1rem;
+  font-size: 2rem;
+}
+
+.icon span{
+  display: none;
+  position: absolute;
+  font-weight: 700;
+  font-size: 1.8rem;
+  padding: 1rem 0 0 0.5rem;
+  white-space: nowrap;
+}
+
+.icon:hover, .icon:focus{
+  text-decoration: none;
+  color: #fff;
+}
+
+.icon:hover span{
+  display:block;
+  color: #6a7b7e;
+}
+
+.progress-num{
+  position: absolute;
+  right:5rem;
+  top: 11rem;
+  font-size: 4rem;
+  color: #252525;
+}
+
+.current-num, .total-num{
+  font-weight: 600;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #191919;
+}

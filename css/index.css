@@ -34,26 +34,36 @@ button {
 /*Radio label and icon styling*/
 #sell-icon {
   background: url("../images/conversion.svg") no-repeat center center;
+  margin-right: 1rem;
+}
+
+#sell-icon:hover {
+  opacity: 1;
 }
 
 #fame-icon {
   background: url("../images/social.svg") no-repeat center center;
+  margin-right: 1rem;
 }
 
 #mobile-icon {
   background: url("../images/mobile.svg") no-repeat center center;
+  opacity: .8;
 }
 
 label {
   display: block;
   color: #fff;
+  margin-right: 2rem;
 }
 
 label::before {
   color: #232529;
   display: inline-block;
   font-size: 2rem;
-  margin-top: 18rem;
+  margin-top: 20rem;
+  text-align: left;
+  width: 20rem;
 }
 
 label[for="sell"]::before {
@@ -165,6 +175,7 @@ div.color-palette {
   visibility: hidden;
 }
 
+
 div.show-palette {
   visibility: visible;
   opacity: 1;
@@ -228,10 +239,13 @@ we need the display none, and the opacity at 0 first. Because we want to be able
 }
 
 #color-options li {
-  border-radius: .5rem;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  box-shadow: inset 0rem -4rem 0rem 0rem #282b30;
   display: inline-block;
   height: 21%;
   margin: 1rem 0 0 .5rem;
+
   width: 18.5%;
 }
 
@@ -247,7 +261,9 @@ we need the display none, and the opacity at 0 first. Because we want to be able
   font-weight: 400;
   letter-spacing: .1rem;
   padding-left: 1rem;
+  position: relative;
   text-transform: uppercase;
+  top: 13.4rem;
 }
 
 #hue-588c75 {background-color: #588c75;}
@@ -386,4 +402,10 @@ we need the display none, and the opacity at 0 first. Because we want to be able
   background-repeat: no-repeat;
   display: block;
   text-overflow: ellipsis;
+}
+
+.fixed-cont-button {
+  position: fixed;
+  bottom: 1rem;
+  right: 2rem;;
 }

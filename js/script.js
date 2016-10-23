@@ -9,12 +9,14 @@ window.onload = function () {
       cacheDOM: function () {
         this.selector = document.getElementById("color-container");
         this.palette = document.querySelector(".color-palette");
+        this.form = document.querySelector("form");
       },
       bindEvents: function () {
         this.selector.addEventListener("click", this.showPalette);
       },
       showPalette: function () {
         palettePopUp.palette.classList.toggle("show-palette");
+        this.form.classList.toggle("hide-form");
         colorPicker.init();
       }
     };
@@ -37,6 +39,7 @@ window.onload = function () {
         pickedColor = this.children[0].innerHTML;
         colorPicker.selector.style.background = pickedColor;
         palettePopUp.palette.classList.toggle("show-palette");
+        palettePopUp.form.classList.toggle("hide-form");
       }
     };
 

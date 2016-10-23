@@ -1,7 +1,6 @@
 window.onload = function () {
   (function () {
 
-
     var palettePopUp = {
       init: function () {
         this.cacheDOM();
@@ -77,6 +76,7 @@ window.onload = function () {
     // };
 
     palettePopUp.init();
+
   }());
 
 };

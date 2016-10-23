@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
 * {
   box-sizing: border-box;
 }
@@ -11,8 +14,7 @@ html {
 }
 
 body {
-  /*margin: 0;
-  padding: 0;*/
+  font-family: 'Raleway', Arial, sans-serif;
 }
 
 form {
@@ -64,13 +66,10 @@ input[type="radio"] {
   position: absolute;
 }
 
+
 input[type"color"] {
   width: 50rem;
 }
-
-/*#color-container {
-  height: 14rem;
-}*/
 
 .preview-container {
   background-color: #292c30;
@@ -93,6 +92,7 @@ input[type"color"] {
   content: '\25BE';
   margin-left: 4rem;
 }
+
 
 .preview-color {
   background-color: #555b64;
@@ -219,3 +219,59 @@ we need the display none, and the opacity at 0 first. Because we want to be able
 #hue-faf4d4 {background-color: #faf4d4;}
 #hue-fbdfc9 {background-color: #fbdfc9;}
 #hue-f1c1bd {background-color: #f1c1bd;}
+
+.header{
+  width: 100%;
+  background-color: #3b3f45;
+  padding: 3rem;
+  margin-bottom: 1rem;
+}
+
+.header h1{
+  color: #fff;
+  font-weight: 600;
+  font-size: 3.5rem;
+}
+
+.icon{
+  margin-top: 1rem;
+  color: #252525;
+}
+
+.icon:before{
+  margin: 0 1rem;
+  font-size: 2rem;
+}
+
+.icon span{
+  display: none;
+  position: absolute;
+  font-weight: 700;
+  font-size: 1.8rem;
+  padding: 1rem 0 0 0.5rem;
+  white-space: nowrap;
+}
+
+.icon:hover, .icon:focus{
+  text-decoration: none;
+  color: #fff;
+}
+
+.icon:hover span{
+  display:block;
+  color: #6a7b7e;
+}
+
+.progress-num{
+  position: absolute;
+  right:5rem;
+  top: 11rem;
+  font-size: 4rem;
+  color: #252525;
+}
+
+.current-num, .total-num{
+  font-weight: 600;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #191919;
+}

@@ -61,7 +61,6 @@ window.onload = function () {
         this.header = document.querySelector(".header");
       },
       bindEvents: function () {
-        // this.field.addEventListener("click", this.showFinalForm);
         this.field.addEventListener("keyup", this.showFinalForm);
       },
       showFinalForm: function () {
@@ -80,7 +79,6 @@ window.onload = function () {
         this.bindEvents();
       },
       cacheDOM: function () {
-        // this.divs = document.getElementsByClassName("field-div");
         this.fields = document.getElementsByClassName("first-form-fill");
         this.finalName = document.getElementById("form-final-name");
       },
@@ -91,19 +89,10 @@ window.onload = function () {
       },
       test: function () {
         if (event.key === "Enter") {
-          console.log(this);
-          console.log(this.id);
-          console.log(this.value);
-          console.log(palettePopUp.finalForm);
-
           if (this.id == document.getElementsByClassName(this.id)[0].classList[0]) {
             document.querySelector("." + this.id + "").value = this.value;
           }
-
           this.parentNode.classList.toggle("form-effect");
-          // window.location.hash = "";
-          // var nextField = "#" + this.parentNode.nextElementSibling.id;
-          // window.location.hash = nextField;
         }
       }
     };

@@ -9,21 +9,25 @@ html, body, .color-palette {
   height: 100%;
 }
 
-html, form {
-  background-color: #3b3f45;
-}
-
 html {
   font-size: 62.5%;
 }
 
 body {
+  background-color: #3b3f45;
   font-family: 'Raleway', Arial, sans-serif;
 }
 
 form {
   font-size: 4rem;
+  margin: 0 auto;
+  width: 80%;
 }
+
+.hide-form {
+  display: none;
+}
+
 
 button {
   font-size: 1.6rem;
@@ -42,6 +46,7 @@ button {
 }
 
 label {
+  display: block;
   color: #fff;
 }
 
@@ -114,12 +119,12 @@ input[type="color"] {
 
 div.color-palette {
   background-color: #3b3f45;
-  visibility: hidden;
+  left: 0;
   opacity: 0;
   position: absolute;
   top: 0;
-  width: 100%;
   transition: all .3s;
+  visibility: hidden;
 }
 
 div.show-palette {

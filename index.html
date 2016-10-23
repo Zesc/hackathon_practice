@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <title>Practice Hackathon - Fullscreen Form</title>
     <link rel="stylesheet" href="css/normalize.css" media="screen" title="no title">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/index.css" media="screen" title="no title">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script type="text/javascript" src="js/script.js"></script>
 
   </head>
@@ -31,18 +31,18 @@
     </div>
     <form id="proj_form" name="proj_form" method="post">
 
-        <div class="">
+        <div>
           <label for="name">What's your name?</label>
           <input type="text" id="name" placeholder="Rick Sanchez" autofocus required>
         </div>
 
-        <div class="">
+        <div>
           <label for="email">What's your email address?</label>
           <input type="email" id="email" placeholder="c137@galaxymail.com" required>
         </div>
 
 
-        <div class="">
+        <div>
           <label for="website">What's your priority for your new website?</label>
           <input type="radio" id="sell" name="website" value="sell" required>
           <label for="sell" id="sell-icon" class="radio-icons"></label>
@@ -61,35 +61,11 @@
             </div></label>
         </div>
 
-        <div class="color-palette">
-          <ul id="color-options">
-            <li class="first-in-row first-row" id="hue-588c75"><span class="palette-desc">#588c75</span></li>
-            <li class="first-row" id="hue-b0c47f"><span class="palette-desc">#b0c47f</span></li>
-            <li class="first-row" id="hue-f3e395"><span class="palette-desc">#f3e395</span></li>
-            <li class="first-row" id="hue-f3ae73"><span class="palette-desc">#f3ae73</span></li>
-            <li class="first-row" id="hue-da645a"><span class="palette-desc">#da645a</span></li>
-            <li class="first-in-row second-row" id="hue-79a38f"><span class="palette-desc">#79a38f</span></li>
-            <li class="second-row" id="hue-c1d099"><span class="palette-desc">#c1d099</span></li>
-            <li class="second-row" id="hue-f5eaaa"><span class="palette-desc">#f5eaaa</span></li>
-            <li class="second-row" id="hue-f5be8f"><span class="palette-desc">#f5be8f</span></li>
-            <li class="second-row" id="hue-e1837b"><span class="palette-desc">#e1837b</span></li>
-            <li class="first-in-row third-row" id="hue-9bbaab"><span class="palette-desc">#9bbaab</span></li>
-            <li class="third-row" id="hue-d1dcb2"><span class="palette-desc">#d1dcb2</span></li>
-            <li class="third-row" id="hue-f9eec0"><span class="palette-desc">#f9eec0</span></li>
-            <li class="third-row" id="hue-f7cda9"><span class="palette-desc">#f7cda9</span></li>
-            <li class="third-row" id="hue-e8a19b"><span class="palette-desc">#e8a19b</span></li>
-            <li class="first-in-row last-row" id="hue-bdd1c8"><span class="palette-desc">#bdd1c8</span></li>
-            <li class="last-row" id="hue-e1e7cd"><span class="palette-desc">#e1e7cd</span></li>
-            <li class="last-row" id="hue-faf4d4"><span class="palette-desc">#faf4d4</span></li>
-            <li class="last-row" id="hue-fbdfc9"><span class="palette-desc">#fbdfc9</span></li>
-            <li class="last-row" id="hue-f1c1bd"><span class="palette-desc">#f1c1bd</span></li>
-          </ul>
-
-        <div class="">
+        <div>
             <label for="description">Describe how you imagine your website</label><br>
             <textarea name="description" placeholder="Describe here"></textarea>
         </div>
-        <div class="">
+        <div>
             <label for="budget">What's your budget?</label><br>
             <input name="budget" type="number" placeholder="1000" step="100" min="100">
 
@@ -97,6 +73,31 @@
 
         <button type="submit" name="button">Submit</button>
     </form>
+
+    <div class="color-palette">
+      <ul id="color-options">
+        <li class="first-in-row first-row" id="hue-588c75"><span class="palette-desc">#588c75</span></li>
+        <li class="first-row" id="hue-b0c47f"><span class="palette-desc">#b0c47f</span></li>
+        <li class="first-row" id="hue-f3e395"><span class="palette-desc">#f3e395</span></li>
+        <li class="first-row" id="hue-f3ae73"><span class="palette-desc">#f3ae73</span></li>
+        <li class="first-row" id="hue-da645a"><span class="palette-desc">#da645a</span></li>
+        <li class="first-in-row second-row" id="hue-79a38f"><span class="palette-desc">#79a38f</span></li>
+        <li class="second-row" id="hue-c1d099"><span class="palette-desc">#c1d099</span></li>
+        <li class="second-row" id="hue-f5eaaa"><span class="palette-desc">#f5eaaa</span></li>
+        <li class="second-row" id="hue-f5be8f"><span class="palette-desc">#f5be8f</span></li>
+        <li class="second-row" id="hue-e1837b"><span class="palette-desc">#e1837b</span></li>
+        <li class="first-in-row third-row" id="hue-9bbaab"><span class="palette-desc">#9bbaab</span></li>
+        <li class="third-row" id="hue-d1dcb2"><span class="palette-desc">#d1dcb2</span></li>
+        <li class="third-row" id="hue-f9eec0"><span class="palette-desc">#f9eec0</span></li>
+        <li class="third-row" id="hue-f7cda9"><span class="palette-desc">#f7cda9</span></li>
+        <li class="third-row" id="hue-e8a19b"><span class="palette-desc">#e8a19b</span></li>
+        <li class="first-in-row last-row" id="hue-bdd1c8"><span class="palette-desc">#bdd1c8</span></li>
+        <li class="last-row" id="hue-e1e7cd"><span class="palette-desc">#e1e7cd</span></li>
+        <li class="last-row" id="hue-faf4d4"><span class="palette-desc">#faf4d4</span></li>
+        <li class="last-row" id="hue-fbdfc9"><span class="palette-desc">#fbdfc9</span></li>
+        <li class="last-row" id="hue-f1c1bd"><span class="palette-desc">#f1c1bd</span></li>
+      </ul>
+    </div>
 
   </body>
 </html>
